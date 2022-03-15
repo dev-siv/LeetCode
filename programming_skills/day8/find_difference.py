@@ -4,7 +4,6 @@ def findTheDifference(s, t):
             return l
 
 
-
 if __name__ == "__main__":
     s = "abcd"
     t = "abcde"
