@@ -6,9 +6,9 @@ class Solution:
         count = 0
         for index, val in enumerate(nums):
             if val != 0:
-                nums[count] = val
-                if index != count:
-                    nums[index] = 0
+                nums[count], nums[index] = val, nums[count]
+                # if index != count:
+                #     nums[index] = 0
                 count += 1
         # return nums
 
