@@ -5,16 +5,14 @@ https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-s
 
 class Solution:
     def average(self, salary):
-        maximum, length, total = 0, 0, 0
-        minimum = salary[0]
+        maximum, total, minimum = 0, 0, salary[0]
         for sal in salary:
             if minimum > sal:
                 minimum = sal
             if maximum < sal:
                 maximum = sal
             total += sal
-            length += 1
-        return (total-minimum-maximum)/(length-2)
+        return (total - (minimum + maximum)) / (len(salary) - 2)
 
 
 s = Solution()
