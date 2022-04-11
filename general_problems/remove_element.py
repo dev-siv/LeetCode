@@ -6,12 +6,11 @@ https://leetcode.com/problems/remove-element/
 #
 def removeElement(nums, val):
     count = 0
-    for index, v in enumerate(nums):
-        if val == v and index+1 < len(nums):
-            nums[index] = nums[index+1]
-            # nums[index+1] = 0
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[i], nums[count] = 0, nums[i]
             count += 1
-    return len(nums) - count
+    return nums, count
 
 
 if __name__ == "__main__":
