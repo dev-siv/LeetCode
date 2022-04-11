@@ -16,9 +16,10 @@ class Solution:
         }
         if num in romans:
             return romans[num]
-        
+        for letter in str(num)[::-1]:
+            print(letter)
 
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.intToRoman(1000))
+    print(s.intToRoman(1994))

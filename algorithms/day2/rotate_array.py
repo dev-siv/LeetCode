@@ -6,14 +6,15 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        q = deque(nums)
-        q.rotate(k)
-        for index, value in enumerate(q):
-            nums[index] = value
+        # q = deque(nums)
+        # q.rotate(k)
+        # for index, value in enumerate(q):
+        #     nums[index] = value
 
 
 
 s = Solution()
-n = [1, 2, 3, 4, 5, 6, 7]
+n = [1, 2, 3, 4]
+r = [5, 6, 7, 1, 2, 3, 4]
 k = 3
 s.rotate(n, k)
